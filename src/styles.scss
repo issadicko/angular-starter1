@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+body, html{
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+app-root, app-site-layout{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#app-nav{
+
+  display: flex;
+  align-items: center;
+
+  ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+
+    li{
+      margin: 0;
+      padding: 0;
+
+      a{
+        text-decoration: none;
+        padding: 10px 20px;
+
+        &.active{
+          background: var(--bs-primary);
+          border-radius: 10px;
+          color: white;
+        }
+      }
+    }
+  }
+
+}
+
+
+.spacer{
+  flex: 1;
+}
